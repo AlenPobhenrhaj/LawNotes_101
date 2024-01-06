@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.LawNotes10V" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/primaryBackground</item>
+
+        <!-- Background color for the overall app -->
+        <item name="android:windowBackground">@color/primaryBackground</item>
+
+        <!-- Color for text and default elements -->
+        <item name="android:textColor">@color/textColor</item>
+
+        <!-- Customize other colors as needed... -->
+    </style>
+
+    <style name="Theme.LawNotes10V" parent="Base.Theme.LawNotes10V" />
+    <!-- ... other styles ... -->
+</resources>
