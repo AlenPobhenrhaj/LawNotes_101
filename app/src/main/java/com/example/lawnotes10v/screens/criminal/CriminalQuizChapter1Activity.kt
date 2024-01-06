@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.data.QuizQuestion
+import com.example.lawnotes10v.data.QuizRepository.quizQuestions
 import com.example.lawnotes10v.databinding.ActivityCriminalQuizChapter1Binding
 
 class CriminalQuizChapter1Activity : AppCompatActivity() {
@@ -16,43 +17,6 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
     private var isExplanationVisible = false
     private var score = 0 // A global variable to track the score
 
-    // Define your questions here
-    private val quizQuestions = mutableListOf(
-        QuizQuestion(
-            question = "Criminal Law is designed to:",
-            options = mutableListOf(
-                "Compensate victims",
-                "Control behaviors of citizens",
-                "Regulate international trade",
-                "Something else"
-            ),
-            correctAnswer = "Control behaviors of citizens",
-            explanation = "Criminal Law sets standards for permissible behavior within a society."
-        ),
-        QuizQuestion(
-            question = "In Criminal Law, who prosecutes the defendant?",
-            options = mutableListOf(
-                "The victim",
-                "A jury",
-                "The State",
-                "None of the above"
-            ),
-            correctAnswer = "The State",
-            explanation = "In criminal proceedings, the state is responsible for prosecuting individuals accused of crimes."
-        ),
-        QuizQuestion(
-            question = "Actus reus refers to:",
-            options = mutableListOf(
-                "The guilty mind",
-                "The criminal act",
-                "The legal duty",
-                "None of the above"
-            ),
-            correctAnswer = "The criminal act",
-            explanation = "Actus reus is the physical act of committing a crime, a fundamental component of criminal liability."
-        )
-        // Add more questions as needed...
-    )
 
     companion object {
         const val CURRENT_QUESTION_INDEX = "current_question_index"
@@ -76,7 +40,11 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
             currentIndex = savedInstanceState.getInt(CURRENT_QUESTION_INDEX, 0)
             isExplanationVisible = savedInstanceState.getBoolean(IS_EXPLANATION_VISIBLE, false)
         }
-
+        setupInitialState()
+        loadQuestion(quizQuestions[currentIndex])
+        handleSubmissionAnswer()
+    }
+    private fun setupInitialState() {
         // Listener for RadioGroup to enable the submit button when an option is selected
         binding.answersRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             if (checkedId != -1) {
@@ -84,9 +52,8 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
                 binding.submitAnswerButton.isEnabled = true
             }
         }
-
-        loadQuestion(quizQuestions[currentIndex])
-
+    }
+    private fun handleSubmissionAnswer() {
         binding.submitAnswerButton.setOnClickListener {
             if (!isExplanationVisible) {
                 // If the explanation isn't visible, show the answer and explanation
@@ -102,13 +69,11 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         }
     }
 
-
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putInt(CURRENT_QUESTION_INDEX, currentIndex)
         outState.putBoolean(IS_EXPLANATION_VISIBLE, isExplanationVisible)
     }
-
     private fun loadQuestion(question: QuizQuestion) {
 
         // Clear previous selection and reset button states
@@ -136,7 +101,6 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         binding.submitAnswerButton.isEnabled = false // Disable until an option is selected
         binding.submitAnswerButton.text = "Submit" // Set text to "Submit"
     }
-
 
     private fun showAnswer() {
         val selectedOptionIndex =
@@ -169,15 +133,12 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         // After showing the answer, set the isExplanationVisible to true as we're now showing the explanation
         isExplanationVisible = true
     }
-
-
     private fun showExplanation() {
         binding.explanationTextView.text = quizQuestions[currentIndex].explanation
         binding.explanationTextView.visibility = View.VISIBLE
         isExplanationVisible = true
 
     }
-
     private fun nextQuestion() {
         if (currentIndex < quizQuestions.size - 1) {
             currentIndex++
@@ -194,7 +155,6 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         binding.submitAnswerButton.text = "Submit" // Change text back to "Submit"
         isExplanationVisible = false // Set explanation flag back to false
     }
-
     private fun navigateToScoreScreen() {
         val intent = Intent(this, CriminalQuizScoreChapter1Activity::class.java)
         intent.putExtra("SCORE", score)
