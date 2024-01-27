@@ -13,7 +13,14 @@ object FlashCardChapter1 {
         CriminalFlashCardChapter1("7. Appeals Process", "From Magistrate’s Court to Crown Court, then to Court of Appeal, and possibly the Supreme Court."),
         CriminalFlashCardChapter1("8. Who can Commit a Crime?", "Legal capacity is required; age and mental state are factors."),
         CriminalFlashCardChapter1("9. Actus Reus Details", "Can be a voluntary act, omission, or a state of affairs."),
-        CriminalFlashCardChapter1("10. Mens Rea", "Intent, recklessness, or negligence that constitutes the mental state of the offence.")
+        CriminalFlashCardChapter1("10. Mens Rea", "Intent, recklessness, or negligence that constitutes the mental state of the offence."),
+        CriminalFlashCardChapter1("11. Types of Mens Rea\n", "Intention, recklessness, and negligence."),
+        CriminalFlashCardChapter1("12. Proof Requirements", "Both actus reus and mens rea must be proven unless it's a strict liability offence."),
+        CriminalFlashCardChapter1("13. Automatism as a Defence", "Acts done while unconscious or without voluntary control can negate liability."),
+        CriminalFlashCardChapter1("14. Omission Liability", "Failure to act can constitute actus reus if there is a legal duty to act."),
+        CriminalFlashCardChapter1("15. Result Crimes", "Defendant must cause the prohibited outcome (e.g., death in homicide)."),
+        CriminalFlashCardChapter1("16. Situational Liability", "Being in a certain state of affairs (e.g., possession of drugs) can constitute an offence."),
+        CriminalFlashCardChapter1("17. Strict Liability Example", "Selling alcohol to minors is an offence regardless of intent or knowledge."),
         // Add more FlashCard instances...
     )
 }
