@@ -167,6 +167,105 @@ object QuizRepository {
             ),
             correctAnswer = "A direct cause of the result without any intervening cause",
             explanation = "Causation must be direct, with the defendant's actions leading to the result without being broken by any intervening events."
+        ),        QuizQuestion(
+            question = "What does Actus Reus encompass in criminal law?",
+            options = mutableListOf(
+                "Only the mental state of the defendant",
+                "The conduct element of an offence, including prohibited acts or omissions",
+                "The verdict of the jury",
+            ),
+            correctAnswer = "The conduct element of an offence, including prohibited acts or omissions",
+            explanation = "Actus Reus refers to the physical element of a crime, which can be an action, lack of action (when there's a legal duty to act), or a situation. It does not involve the mental state of the defendant, which is covered by Mens Rea, nor is it related to the jury's verdict."
+        ),
+        QuizQuestion(
+            question = "When can an omission be considered as Actus Reus?",
+            options = mutableListOf(
+                "When the defendant has a hobby of collecting rare items",
+                "Only in cases of theft",
+                "When the defendant fails to act where there is a legal duty to do so",
+            ),
+            correctAnswer = "When the defendant fails to act where there is a legal duty to do so",
+            explanation = "An omission can be considered as Actus Reus only when the defendant has a specific legal duty to act but fails to do so. Without such a duty, the failure to act does not constitute the physical element of a crime."
+        ),
+        QuizQuestion(
+            question = "Ahmad (1986)\n\nWhat was the significance of Ahmad (1986) in the context of Actus Reus by omission?",
+            options = mutableListOf(
+                "It established that any omission can lead to liability",
+                "It showed that failure to carry out alterations does not amount to \"doing acts\" as required ",
+                "It introduced the concept of Mens Rea",
+            ),
+            correctAnswer = "It showed that failure to carry out alterations does not amount to \"doing acts\" as required by statute",
+            explanation = "Ahmad (1986) clarified that not all omissions can lead to criminal liability. Specifically, it determined that a landlord's failure to make alterations did not meet the statutory requirement of \"doing acts,\" thereby not constituting an actus reus."
+        ),
+        QuizQuestion(
+            question = "What is an example of a statutory duty to act?",
+            options = mutableListOf(
+                "Duty to watch television for at least 2 hours a day",
+                "Duty of a driver to provide a breath sample when asked by the police",
+                "Duty to sing the national anthem every morning",
+            ),
+            correctAnswer = "Duty of a driver to provide a breath sample when asked by the police",
+            explanation = "Statutory duties are specific obligations imposed by law. The requirement for drivers to provide a breath sample, as mandated by the Road Traffic Act 1988, is an example of such a duty, where failure to comply can constitute Actus Reus."
+        ),
+        QuizQuestion(
+            question = "How can contractual duty lead to Actus Reus?",
+            options = mutableListOf(
+                "By failing to watch enough sports",
+                "If someone fails to fulfill a contractual obligation that results in harm",
+                "By not following fashion trends",
+            ),
+            correctAnswer = "If someone fails to fulfill a contractual obligation that results in harm",
+            explanation = "Contractual duties bind individuals to certain actions. When someone fails to fulfill these obligations, and that failure results in harm, it can lead to criminal liability. For instance, a gatekeeper not closing a gate as required by their job contract, leading to a fatal accident, would be held criminally liable."
+        ),
+        QuizQuestion(
+            question = "What constitutes a voluntarily assumed duty?",
+            options = mutableListOf(
+                "Signing up for a library card",
+                "A voluntary assumption of responsibility for another's care",
+                "Choosing a favorite ice cream flavor",
+            ),
+            correctAnswer = "A voluntary assumption of responsibility for another's care",
+            explanation = "Voluntarily assuming responsibility for someone's care creates a legal duty to act in their best interest. Failure to fulfill this duty, especially in situations where the dependent person is harmed due to negligence or inaction, constitutes Actus Reus."
+        ),
+        QuizQuestion(
+            question = "Case Study - R v Miller (1983)\n\nWhat principle was established in R v Miller (1983) regarding Actus Reus and omissions?",
+            options = mutableListOf(
+                "That a person cannot be held liable for accidental actions",
+                "That failing to act after creating a dangerous situation can constitute Actus Reus",
+                "That arson can only be committed intentionally",
+            ),
+            correctAnswer = "That failing to act after creating a dangerous situation can constitute Actus Reus",
+            explanation = "R v Miller established that a person who creates a dangerous situation (even accidentally) and then fails to take reasonable steps to rectify it can be held criminally liable for the resulting harm, as their omission to act constitutes Actus Reus."
+        ),
+        QuizQuestion(
+            question = "Continuing act\n\nWhat does the case of Fagan v Metropolitan Police Commissioner demonstrate about continuing acts?",
+            options = mutableListOf(
+                "That an act can be considered continuous if the defendant maintains a harmful situation",
+                "That parking a car is always considered a criminal act",
+                "That police officers' feet have special legal protection",
+            ),
+            correctAnswer = "That an act can be considered continuous if the defendant maintains a harmful situation",
+            explanation = "In Fagan, the defendant's continued inaction after accidentally causing harm was treated as a continuous act, illustrating that the maintenance of a harmful situation can be considered a single, ongoing Actus Reus."
+        ),
+        QuizQuestion(
+            question = "Medical Law - Airedale NHS Trust v Bland (1993)\n\nWhat was the ruling in Airedale NHS Trust v Bland regarding life-sustaining treatment?",
+            options = mutableListOf(
+                "That doctors must always use every means possible to prolong life",
+                "That treatment can never be withdrawn",
+                "That it's lawful to discontinue life-sustaining treatment when it offers no benefit",
+            ),
+            correctAnswer = "That it's lawful to discontinue life-sustaining treatment when it offers no benefit",
+            explanation = "Airedale NHS Trust v Bland established that discontinuing life-sustaining treatment is lawful when the treatment provides no benefit to the patient, respecting principles of patient autonomy and best interest."
+        ),
+        QuizQuestion(
+            question = "How is the distinction between acts and omissions relevant in medical contexts, particularly in cases like Airedale NHS Trust v Bland?",
+            options = mutableListOf(
+                "It determines the color of hospital walls",
+                "It impacts the legality of withholding or withdrawing treatment",
+                "It decides what food is served in hospitals",
+            ),
+            correctAnswer = " It impacts the legality of withholding or withdrawing treatment",
+            explanation = "The distinction between acts and omissions is crucial in medical law, particularly regarding the legality of withholding or withdrawing life-sustaining treatment. This distinction influences whether such actions are considered lawful omissions or potentially unlawful acts."
         ),
         // Add the rest of your questions here...
     )

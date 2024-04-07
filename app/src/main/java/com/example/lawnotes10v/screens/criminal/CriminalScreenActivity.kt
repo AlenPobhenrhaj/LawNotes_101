@@ -26,7 +26,7 @@ class CriminalScreenActivity : AppCompatActivity() {
         }
 
         binding.btnCases.setOnClickListener {
-            startActivity(Intent(this, CriminalQuizChapter1Activity::class.java).apply {
+            startActivity(Intent(this, CriminalCasesChapter1Activity::class.java).apply {
             })
         }
 
