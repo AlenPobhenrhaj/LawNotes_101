@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityMainBinding
+import com.example.lawnotes10v.screens.contract.ContractChapterSelectionActivity
 import com.example.lawnotes10v.screens.criminal.CriminalChaptersSelectionActivity
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnContract.setOnClickListener {
             // Handle Contract button click
+            startActivity(Intent(this, ContractChapterSelectionActivity::class.java).apply {
+            })
         }
         binding.btnPublic.setOnClickListener {
             // Handle Public button click
