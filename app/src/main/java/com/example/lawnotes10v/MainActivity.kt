@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityMainBinding
 import com.example.lawnotes10v.screens.contract.ContractChapterSelectionActivity
 import com.example.lawnotes10v.screens.criminal.CriminalChaptersSelectionActivity
+import com.example.lawnotes10v.screens.lms.LsmChaptersSelectionActivity
+import com.example.lawnotes10v.screens.public_law.PublicChaptersSelectionActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,9 +31,13 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnPublic.setOnClickListener {
             // Handle Public button click
+            startActivity(Intent(this, PublicChaptersSelectionActivity::class.java).apply {
+            })
         }
         binding.btnLSM.setOnClickListener {
             // Handle LSM button click
+            startActivity(Intent(this, LsmChaptersSelectionActivity::class.java).apply {
+            })
         }
     }
 }
