@@ -1,19 +1,19 @@
-package com.example.lawnotes10v.screens.contract
+package com.example.lawnotes10v.screens.criminal.actusreus
 
 import android.annotation.SuppressLint
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.example.lawnotes10v.data.criminal.actus_reus.FlashCardChapter1
-import com.example.lawnotes10v.data.contract.FlashCardChapter1Contract
-import com.example.lawnotes10v.databinding.ActivityContractFlashCardChapter1Binding
+import com.example.lawnotes10v.databinding.ActivityCriminalFlashCardChapter1Binding
 
-class ContractFlashCardChapter1Activity : AppCompatActivity() {
-    private lateinit var binding: ActivityContractFlashCardChapter1Binding
+class CriminalFlashCardChapter1Activity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityCriminalFlashCardChapter1Binding
     private var currentIndex = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityContractFlashCardChapter1Binding.inflate(layoutInflater)
+        binding = ActivityCriminalFlashCardChapter1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         updateFlashCard() // Initial call to update the flashcard
@@ -26,15 +26,14 @@ class ContractFlashCardChapter1Activity : AppCompatActivity() {
 
         // Back Card button
         binding.btnBackCard.setOnClickListener {
-            currentIndex =
-                if (currentIndex > 0) currentIndex - 1 else FlashCardChapter1.flashCardsChapter1Data.size - 1
+            currentIndex = if (currentIndex > 0) currentIndex - 1 else FlashCardChapter1.flashCardsChapter1Data.size - 1
             updateFlashCard()
         }
     }
 
     @SuppressLint("SetTextI18n")
     private fun updateFlashCard() {
-        val flashCard = FlashCardChapter1Contract.flashCardsChapter1Data[currentIndex]
+        val flashCard = FlashCardChapter1.flashCardsChapter1Data[currentIndex]
         binding.tvFlashCardText.text = "${flashCard.title}\n\n${flashCard.content}"
     }
 }

@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityLsmScreenBinding
-import com.example.lawnotes10v.screens.criminal.CriminalCasesChapter1Activity
-import com.example.lawnotes10v.screens.criminal.CriminalQuizChapter1Activity
-import com.example.lawnotes10v.screens.public_law.PublicFlashCardChapter1Activity
+import com.example.lawnotes10v.screens.criminal.actusreus.CriminalCasesChapter1Activity
+import com.example.lawnotes10v.screens.criminal.actusreus.CriminalQuizChapter1Activity
 
 class LsmScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLsmScreenBinding

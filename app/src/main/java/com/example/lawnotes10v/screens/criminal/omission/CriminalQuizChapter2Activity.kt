@@ -1,18 +1,18 @@
-package com.example.lawnotes10v.screens.criminal
+package com.example.lawnotes10v.screens.criminal.omission
 
 import android.content.Intent
 import android.graphics.Color
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.RadioButton
-import androidx.appcompat.app.AppCompatActivity
-import com.example.lawnotes10v.data.QuizQuestion
-import com.example.lawnotes10v.data.QuizRepository.quizQuestions
-import com.example.lawnotes10v.databinding.ActivityCriminalQuizChapter1Binding
+import com.example.lawnotes10v.data.criminal.omission.CriminalOmissionQuizQuestion
+import com.example.lawnotes10v.data.criminal.omission.QuizRepository
+import com.example.lawnotes10v.databinding.ActivityCriminalQuizChapter2Binding
 
-class CriminalQuizChapter1Activity : AppCompatActivity() {
+class CriminalQuizChapter2Activity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCriminalQuizChapter1Binding
+    private lateinit var binding: ActivityCriminalQuizChapter2Binding
     private var currentIndex = 0
     private var isExplanationVisible = false
     private var score = 0 // A global variable to track the score
@@ -25,7 +25,7 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCriminalQuizChapter1Binding.inflate(layoutInflater)
+        binding = ActivityCriminalQuizChapter2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Initially disable the submit button
@@ -33,7 +33,7 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
 
         // Only shuffle the questions if savedInstanceState is null, indicating a fresh start
         if (savedInstanceState == null) {
-            quizQuestions.shuffle()  // Shuffle the questions
+            QuizRepository.quizQuestions.shuffle()  // Shuffle the questions
             currentIndex = 0 // Reset the index to start at the first question
         } else {
             // Restore the state
@@ -41,7 +41,7 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
             isExplanationVisible = savedInstanceState.getBoolean(IS_EXPLANATION_VISIBLE, false)
         }
         setupInitialState()
-        loadQuestion(quizQuestions[currentIndex])
+        loadQuestion(QuizRepository.quizQuestions[currentIndex])
         handleSubmissionAnswer()
     }
     private fun setupInitialState() {
@@ -74,7 +74,7 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         outState.putInt(CURRENT_QUESTION_INDEX, currentIndex)
         outState.putBoolean(IS_EXPLANATION_VISIBLE, isExplanationVisible)
     }
-    private fun loadQuestion(question: QuizQuestion) {
+    private fun loadQuestion(question: CriminalOmissionQuizQuestion) {
 
         // Clear previous selection and reset button states
         binding.answersRadioGroup.clearCheck()
@@ -106,7 +106,7 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         val selectedOptionIndex =
             binding.answersRadioGroup.indexOfChild(findViewById(binding.answersRadioGroup.checkedRadioButtonId))
         val correctOptionIndex =
-            quizQuestions[currentIndex].options.indexOf(quizQuestions[currentIndex].correctAnswer)
+            QuizRepository.quizQuestions[currentIndex].options.indexOf(QuizRepository.quizQuestions[currentIndex].correctAnswer)
 
         // Highlight correct and wrong answers and disable further selection
         for (i in 0 until binding.answersRadioGroup.childCount) {
@@ -134,16 +134,16 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         isExplanationVisible = true
     }
     private fun showExplanation() {
-        binding.explanationTextView.text = quizQuestions[currentIndex].explanation
+        binding.explanationTextView.text = QuizRepository.quizQuestions[currentIndex].explanation
         binding.explanationTextView.visibility = View.VISIBLE
         isExplanationVisible = true
 
     }
     private fun nextQuestion() {
-        if (currentIndex < quizQuestions.size - 1) {
+        if (currentIndex < QuizRepository.quizQuestions.size - 1) {
             currentIndex++
             isExplanationVisible = false
-            loadQuestion(quizQuestions[currentIndex])
+            loadQuestion(QuizRepository.quizQuestions[currentIndex])
 
         } else {
             // Handle end of quiz, navigate to a results screen or show a summary
@@ -156,9 +156,9 @@ class CriminalQuizChapter1Activity : AppCompatActivity() {
         isExplanationVisible = false // Set explanation flag back to false
     }
     private fun navigateToScoreScreen() {
-        val intent = Intent(this, CriminalQuizScoreChapter1Activity::class.java)
+        val intent = Intent(this, CriminalQuizScoreChapter2Activity::class.java)
         intent.putExtra("SCORE", score)
-        intent.putExtra("TOTAL_QUESTIONS", quizQuestions.size)
+        intent.putExtra("TOTAL_QUESTIONS", QuizRepository.quizQuestions.size)
         startActivity(intent)
         finish() // Close the current activity
     }

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityContractChapterSelectionBinding
-import com.example.lawnotes10v.screens.criminal.CriminalScreenActivity
 
 class ContractChapterSelectionActivity : AppCompatActivity() {
 

@@ -3,7 +3,7 @@ package com.example.lawnotes10v.screens.public_law
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lawnotes10v.data.FlashCardChapter1Public
+import com.example.lawnotes10v.data.public.FlashCardChapter1Public
 import com.example.lawnotes10v.databinding.ActivityPublicFlashCardChapter1Binding
 
 class PublicFlashCardChapter1Activity : AppCompatActivity() {

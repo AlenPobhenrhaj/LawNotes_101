@@ -1,34 +1,39 @@
-package com.example.lawnotes10v.data
+package com.example.lawnotes10v.data.criminal.actus_reus
 
-data class QuizQuestion(
+data class CriminalActusReusQuizQuestion(
     val question: String,
     val options: MutableList<String>, // Mutable to shuffle later
     val correctAnswer: String,
     val explanation: String
 )
+
 object QuizRepository {
     val quizQuestions = mutableListOf(
-        QuizQuestion(
-            question = "Criminal Law is designed to:",
+        CriminalActusReusQuizQuestion(
+            question = "What is the term Actus Reus commonly referred to as?",
             options = mutableListOf(
-                "Compensate victims",
-                "Control behaviors of citizens",
-                "Regulate international trade",
+                "Guilty mind",
+                "Prohibited conduct",
+                "Negligence",
+                "Self-defense"
             ),
-            correctAnswer = "Control behaviors of citizens",
-            explanation = "Criminal Law sets standards for permissible behavior within a society."
+            correctAnswer = "Prohibited conduct",
+            explanation = "Actus Reus refers to the conduct element of a crime, which is the prohibited act."
+
         ),
-        QuizQuestion(
-            question = "In Criminal Law, who prosecutes the defendant?",
+        CriminalActusReusQuizQuestion(
+            question = "Which of the following is NOT a component of Actus Reus?",
             options = mutableListOf(
-                "The victim",
-                "A jury",
-                "The State",
+                "The act",
+                "The mental state of the defendant",
+                "The result caused by the act",
+                "The circumstances of the act"
             ),
-            correctAnswer = "The State",
-            explanation = "In criminal proceedings, the state is responsible for prosecuting individuals accused of crimes."
+            correctAnswer = "The mental state of the defendant",
+            explanation = "The mental state is related to Mens Rea, not Actus Reus."
+
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Actus reus refers to:",
             options = mutableListOf(
                 "The guilty mind",
@@ -38,7 +43,7 @@ object QuizRepository {
             correctAnswer = "The criminal act",
             explanation = "Actus reus is the physical act of committing a crime, a fundamental component of criminal liability."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Mens rea is:",
             options = mutableListOf(
                 "A strict liability",
@@ -48,17 +53,19 @@ object QuizRepository {
             correctAnswer = "The mental state of committing a crime",
             explanation = " Mens rea refers to the mental state or 'guilty mind' behind the commission of a criminal act."
         ),
-        QuizQuestion(
-            question = "Which of the following is a principle of Civil Law?",
+        CriminalActusReusQuizQuestion(
+            question = "Which of the following crimes is an example of a conduct crime?",
             options = mutableListOf(
-                "Punishment of the wrongdoer",
-                "Compensation to the victim",
-                "Protection of state interests",
+                "Murder",
+                "Manslaughter",
+                "Possession of drugs",
+                "Assault causing injury"
             ),
-            correctAnswer = "Compensation to the victim",
-            explanation = "Civil Law focuses on resolving disputes between individuals or organizations,"
+            correctAnswer = "Possession of drugs",
+            explanation = "Conduct crimes require only that a prohibited act occurs, without the need for a result."
+
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Which of the following is a principle of Civil Law?",
             options = mutableListOf(
                 "Punishment of the wrongdoer",
@@ -68,17 +75,19 @@ object QuizRepository {
             correctAnswer = "Compensation to the victim",
             explanation = "Civil Law deals with compensating the victim for losses suffered due to the defendant's actions."
         ),
-        QuizQuestion(
-            question = "The 'golden thread' of English Criminal Law means that:",
+        CriminalActusReusQuizQuestion(
+            question = "In criminal law, what must generally be proven alongside Actus Reus to establish liability?",
             options = mutableListOf(
-                "The defendant is always innocent",
-                "The prosecution must prove guilt",
-                "The jury decides on sentencing",
+                "Mens Rea",
+                "Negligence",
+                "Recklessness",
+                "Ignorance of the law"
             ),
-            correctAnswer = "The prosecution must prove guilt",
-            explanation = "This principle emphasizes that it is the prosecution's responsibility to prove the defendant's guilt beyond a reasonable doubt."
+            correctAnswer = "Mens Rea",
+            explanation = "Both Actus Reus (the act) and Mens Rea (the mental state) must be proven for criminal liability."
+
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "A strict liability offense:",
             options = mutableListOf(
                 "Requires proof of mens rea",
@@ -88,7 +97,7 @@ object QuizRepository {
             correctAnswer = "Is based solely on the actus reus",
             explanation = "In strict liability offenses, the defendant can be liable for the mere act of committing the offense, without the prosecution needing to prove intent or mens rea."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "If a defendant believed they possessed something different than what was found, they:",
             options = mutableListOf(
                 "Cannot be found guilty",
@@ -98,7 +107,7 @@ object QuizRepository {
             correctAnswer = "Can be found guilty of possession",
             explanation = "A mistake of fact is generally not a defense to possession if the item possessed is illegal."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Which of the following is true about omission liability?",
             options = mutableListOf(
                 "It is always punishable",
@@ -108,7 +117,7 @@ object QuizRepository {
             correctAnswer = "It requires a legal duty to act",
             explanation = "Liability for omission stems from failing to act when there is a legal obligation to do so."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "In result crimes, what must the prosecution establish?",
             options = mutableListOf(
                 "Mens rea only",
@@ -118,7 +127,7 @@ object QuizRepository {
             correctAnswer = "Causation",
             explanation = "The prosecution must show a causal link between the defendant's act and the prohibited result."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "The case R v Cunningham is significant for establishing:",
             options = mutableListOf(
                 "Intention as a form of mens rea",
@@ -128,7 +137,7 @@ object QuizRepository {
             correctAnswer = "Recklessness as a form of mens rea",
             explanation = "The case clarified the mens rea of recklessness, which involves a conscious disregard of a substantial and unjustifiable risk."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Status crimes are:",
             options = mutableListOf(
                 "Always strict liability offenses",
@@ -138,7 +147,7 @@ object QuizRepository {
             correctAnswer = "Based on the defendant being in a certain situation",
             explanation = "Status crimes involve criminal liability for being in a situation deemed illegal, regardless of conduct or intent."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Automatism can negate:",
             options = mutableListOf(
                 "Only actus reus",
@@ -148,7 +157,7 @@ object QuizRepository {
             correctAnswer = "Both actus reus and mens rea",
             explanation = "Automatism, as a defense, suggests the defendant was not in control of their actions, negating both the physical act and the intent."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "R v Larsonneur illustrates situational liability because:",
             options = mutableListOf(
                 "The defendant voluntarily committed a crime",
@@ -158,7 +167,7 @@ object QuizRepository {
             correctAnswer = "The defendant was in an unlawful situation regardless of intent",
             explanation = "The defendant was criminally liable simply for being in a certain situation, which is the essence of situational liability."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "In result crimes, the principle of causation requires:",
             options = mutableListOf(
                 "An indirect cause of the result",
@@ -167,7 +176,8 @@ object QuizRepository {
             ),
             correctAnswer = "A direct cause of the result without any intervening cause",
             explanation = "Causation must be direct, with the defendant's actions leading to the result without being broken by any intervening events."
-        ),        QuizQuestion(
+        ),
+        CriminalActusReusQuizQuestion(
             question = "What does Actus Reus encompass in criminal law?",
             options = mutableListOf(
                 "Only the mental state of the defendant",
@@ -177,7 +187,7 @@ object QuizRepository {
             correctAnswer = "The conduct element of an offence, including prohibited acts or omissions",
             explanation = "Actus Reus refers to the physical element of a crime, which can be an action, lack of action (when there's a legal duty to act), or a situation. It does not involve the mental state of the defendant, which is covered by Mens Rea, nor is it related to the jury's verdict."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "When can an omission be considered as Actus Reus?",
             options = mutableListOf(
                 "When the defendant has a hobby of collecting rare items",
@@ -187,17 +197,19 @@ object QuizRepository {
             correctAnswer = "When the defendant fails to act where there is a legal duty to do so",
             explanation = "An omission can be considered as Actus Reus only when the defendant has a specific legal duty to act but fails to do so. Without such a duty, the failure to act does not constitute the physical element of a crime."
         ),
-        QuizQuestion(
-            question = "Ahmad (1986)\n\nWhat was the significance of Ahmad (1986) in the context of Actus Reus by omission?",
+        CriminalActusReusQuizQuestion(
+            question = "Which of the following accurately describes a continuing act?",
             options = mutableListOf(
-                "It established that any omission can lead to liability",
-                "It showed that failure to carry out alterations does not amount to \"doing acts\" as required ",
-                "It introduced the concept of Mens Rea",
+                "An act that occurs repeatedly",
+                "An act that begins innocently but becomes criminal when the offender becomes aware of it",
+                "A crime that requires multiple actions to be completed",
+                "A crime where the defendant continues acting even after being caught"
             ),
-            correctAnswer = "It showed that failure to carry out alterations does not amount to \"doing acts\" as required by statute",
-            explanation = "Ahmad (1986) clarified that not all omissions can lead to criminal liability. Specifically, it determined that a landlord's failure to make alterations did not meet the statutory requirement of \"doing acts,\" thereby not constituting an actus reus."
+            correctAnswer = "An act that begins innocently but becomes criminal when the offender becomes aware of it",
+            explanation = "A continuing act involves a situation where the act starts unintentionally but becomes criminal once the individual is aware of the harm and does not stop."
+
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "What is an example of a statutory duty to act?",
             options = mutableListOf(
                 "Duty to watch television for at least 2 hours a day",
@@ -207,7 +219,7 @@ object QuizRepository {
             correctAnswer = "Duty of a driver to provide a breath sample when asked by the police",
             explanation = "Statutory duties are specific obligations imposed by law. The requirement for drivers to provide a breath sample, as mandated by the Road Traffic Act 1988, is an example of such a duty, where failure to comply can constitute Actus Reus."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "How can contractual duty lead to Actus Reus?",
             options = mutableListOf(
                 "By failing to watch enough sports",
@@ -217,7 +229,7 @@ object QuizRepository {
             correctAnswer = "If someone fails to fulfill a contractual obligation that results in harm",
             explanation = "Contractual duties bind individuals to certain actions. When someone fails to fulfill these obligations, and that failure results in harm, it can lead to criminal liability. For instance, a gatekeeper not closing a gate as required by their job contract, leading to a fatal accident, would be held criminally liable."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "What constitutes a voluntarily assumed duty?",
             options = mutableListOf(
                 "Signing up for a library card",
@@ -227,7 +239,7 @@ object QuizRepository {
             correctAnswer = "A voluntary assumption of responsibility for another's care",
             explanation = "Voluntarily assuming responsibility for someone's care creates a legal duty to act in their best interest. Failure to fulfill this duty, especially in situations where the dependent person is harmed due to negligence or inaction, constitutes Actus Reus."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Case Study - R v Miller (1983)\n\nWhat principle was established in R v Miller (1983) regarding Actus Reus and omissions?",
             options = mutableListOf(
                 "That a person cannot be held liable for accidental actions",
@@ -237,7 +249,7 @@ object QuizRepository {
             correctAnswer = "That failing to act after creating a dangerous situation can constitute Actus Reus",
             explanation = "R v Miller established that a person who creates a dangerous situation (even accidentally) and then fails to take reasonable steps to rectify it can be held criminally liable for the resulting harm, as their omission to act constitutes Actus Reus."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Continuing act\n\nWhat does the case of Fagan v Metropolitan Police Commissioner demonstrate about continuing acts?",
             options = mutableListOf(
                 "That an act can be considered continuous if the defendant maintains a harmful situation",
@@ -247,7 +259,7 @@ object QuizRepository {
             correctAnswer = "That an act can be considered continuous if the defendant maintains a harmful situation",
             explanation = "In Fagan, the defendant's continued inaction after accidentally causing harm was treated as a continuous act, illustrating that the maintenance of a harmful situation can be considered a single, ongoing Actus Reus."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "Medical Law - Airedale NHS Trust v Bland (1993)\n\nWhat was the ruling in Airedale NHS Trust v Bland regarding life-sustaining treatment?",
             options = mutableListOf(
                 "That doctors must always use every means possible to prolong life",
@@ -257,7 +269,7 @@ object QuizRepository {
             correctAnswer = "That it's lawful to discontinue life-sustaining treatment when it offers no benefit",
             explanation = "Airedale NHS Trust v Bland established that discontinuing life-sustaining treatment is lawful when the treatment provides no benefit to the patient, respecting principles of patient autonomy and best interest."
         ),
-        QuizQuestion(
+        CriminalActusReusQuizQuestion(
             question = "How is the distinction between acts and omissions relevant in medical contexts, particularly in cases like Airedale NHS Trust v Bland?",
             options = mutableListOf(
                 "It determines the color of hospital walls",

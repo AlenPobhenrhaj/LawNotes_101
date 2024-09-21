@@ -8,10 +8,40 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/scales_image"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/scales_image"
         android:supportsRtl="true"
         android:theme="@style/Theme.LawNotes10V"
         tools:targetApi="31">
+        <activity
+            android:name=".screens.criminal.causation.CriminalCasesChapter3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.causation.CriminalQuizScoreChapter3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.causation.CriminalQuizChapter3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.causation.CriminalFlashCardChapter3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.omission.CriminalCasesChapter2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.omission.CriminalQuizScoreChapter2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.omission.CriminalQuizChapter2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.omission.CriminalFlashCardChapter2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.omission.OmissionScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.causation.CausationScreenActivity"
+            android:exported="false" />
         <activity
             android:name=".screens.lms.LsmFlashCardChapter1Activity"
             android:exported="false" />
@@ -40,22 +70,22 @@
             android:name=".screens.contract.ContractScreenActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.criminal.CriminalCasesChapter1Activity"
+            android:name=".screens.criminal.actusreus.CriminalCasesChapter1Activity"
             android:exported="false" />
         <activity
-            android:name=".screens.criminal.CriminalQuizScoreChapter1Activity"
+            android:name=".screens.criminal.actusreus.CriminalQuizScoreChapter1Activity"
             android:exported="false" />
         <activity
-            android:name=".screens.criminal.CriminalQuizChapter1Activity"
+            android:name=".screens.criminal.actusreus.CriminalQuizChapter1Activity"
             android:exported="false" />
         <activity
             android:name=".screens.criminal.CriminalChaptersSelectionActivity"
             android:exported="false" />
         <activity
-            android:name=".screens.criminal.CriminalFlashCardChapter1Activity"
+            android:name=".screens.criminal.actusreus.CriminalFlashCardChapter1Activity"
             android:exported="false" />
         <activity
-            android:name=".screens.criminal.CriminalScreenActivity"
+            android:name=".screens.criminal.actusreus.ActusReusScreenActivity"
             android:exported="false"
             android:label="@string/title_activity_criminal_screen"
             android:theme="@style/Theme.LawNotes10V" />

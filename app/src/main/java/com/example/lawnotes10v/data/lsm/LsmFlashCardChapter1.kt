@@ -1,4 +1,4 @@
-package com.example.lawnotes10v.data
+package com.example.lawnotes10v.data.lsm
 
 data class LsmFlashCardChapter1(val title: String, val content: String)
 

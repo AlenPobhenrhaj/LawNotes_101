@@ -1,4 +1,4 @@
-package com.example.lawnotes10v.data
+package com.example.lawnotes10v.data.contract
 
 data class ContractFlashCardChapter1(val title: String, val content: String)
 

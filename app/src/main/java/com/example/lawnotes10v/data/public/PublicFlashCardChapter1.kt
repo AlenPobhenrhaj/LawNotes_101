@@ -1,4 +1,4 @@
-package com.example.lawnotes10v.data
+package com.example.lawnotes10v.data.public
 
 data class PublicFlashCardChapter1(val title: String, val content: String)
 

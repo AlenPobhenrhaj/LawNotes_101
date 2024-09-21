@@ -1,18 +1,18 @@
-package com.example.lawnotes10v.screens.criminal
+package com.example.lawnotes10v.screens.criminal.omission
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lawnotes10v.R
-import com.example.lawnotes10v.databinding.ActivityCriminalQuizScoreChapter1Binding
+import com.example.lawnotes10v.databinding.ActivityCriminalQuizScoreChapter2Binding
 
-class CriminalQuizScoreChapter1Activity : AppCompatActivity() {
+class CriminalQuizScoreChapter2Activity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCriminalQuizScoreChapter1Binding
+    private lateinit var binding: ActivityCriminalQuizScoreChapter2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCriminalQuizScoreChapter1Binding.inflate(layoutInflater)
+        binding = ActivityCriminalQuizScoreChapter2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val score = intent.getIntExtra("SCORE", 0)
@@ -22,7 +22,7 @@ class CriminalQuizScoreChapter1Activity : AppCompatActivity() {
 
         // Optionally handle retake quiz button
         binding.retakeQuizButton.setOnClickListener {
-            val intent = Intent(this, CriminalQuizChapter1Activity::class.java)
+            val intent = Intent(this, CriminalQuizChapter2Activity::class.java)
             startActivity(intent)
             finish() // Close the current activity
         }

@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityCriminalChaptersSelectionBinding
+import com.example.lawnotes10v.screens.criminal.actusreus.ActusReusScreenActivity
+import com.example.lawnotes10v.screens.criminal.causation.CausationScreenActivity
+import com.example.lawnotes10v.screens.criminal.omission.OmissionScreenActivity
 
 
 class CriminalChaptersSelectionActivity : AppCompatActivity() {
@@ -16,7 +19,17 @@ class CriminalChaptersSelectionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnChapter1.setOnClickListener {
-            startActivity(Intent(this, CriminalScreenActivity::class.java).apply {
+            startActivity(Intent(this, ActusReusScreenActivity::class.java).apply {
+            })
+        }
+
+        binding.btnChapter2.setOnClickListener {
+            startActivity(Intent(this, OmissionScreenActivity::class.java).apply {
+            })
+        }
+
+        binding.btnChapter3.setOnClickListener {
+            startActivity(Intent(this, CausationScreenActivity::class.java).apply {
             })
         }
 

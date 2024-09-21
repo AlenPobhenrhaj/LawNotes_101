@@ -1,18 +1,18 @@
-package com.example.lawnotes10v.screens.criminal
+package com.example.lawnotes10v.screens.criminal.actusreus
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lawnotes10v.databinding.ActivityCriminalScreenBinding
+import com.example.lawnotes10v.databinding.ActivityActusReusScreenBinding
 
-class CriminalScreenActivity : AppCompatActivity() {
+class ActusReusScreenActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityCriminalScreenBinding
+    private lateinit var binding: ActivityActusReusScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCriminalScreenBinding.inflate(layoutInflater)
+        binding = ActivityActusReusScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.btnFlashCards.setOnClickListener {
