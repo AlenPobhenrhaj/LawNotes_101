@@ -13,6 +13,21 @@
         android:theme="@style/Theme.LawNotes10V"
         tools:targetApi="31">
         <activity
+            android:name=".screens.criminal.mensrea.CriminalCasesChapter4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.mensrea.CriminalQuizScoreChapter4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.mensrea.CriminalQuizChapter4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.mensrea.CriminalFlashCardChapter4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screens.criminal.mensrea.MensReaScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".screens.criminal.causation.CriminalCasesChapter3Activity"
             android:exported="false" />
         <activity

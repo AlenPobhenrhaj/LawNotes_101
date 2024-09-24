@@ -3,11 +3,7 @@ package com.example.lawnotes10v.screens.criminal.causation
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lawnotes10v.databinding.ActivityActusReusScreenBinding
 import com.example.lawnotes10v.databinding.ActivityCausationScreenBinding
-import com.example.lawnotes10v.screens.criminal.actusreus.CriminalCasesChapter1Activity
-import com.example.lawnotes10v.screens.criminal.actusreus.CriminalFlashCardChapter1Activity
-import com.example.lawnotes10v.screens.criminal.actusreus.CriminalQuizChapter1Activity
 
 class CausationScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCausationScreenBinding
