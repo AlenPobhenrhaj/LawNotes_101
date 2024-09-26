@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.lawnotes10v.databinding.ActivityCriminalChaptersSelectionBinding
 import com.example.lawnotes10v.screens.criminal.actusreus.ActusReusScreenActivity
 import com.example.lawnotes10v.screens.criminal.causation.CausationScreenActivity
+import com.example.lawnotes10v.screens.criminal.homicide.HomicideScreenActivity
 import com.example.lawnotes10v.screens.criminal.mensrea.MensReaScreenActivity
 import com.example.lawnotes10v.screens.criminal.omission.OmissionScreenActivity
 
@@ -36,6 +37,11 @@ class CriminalChaptersSelectionActivity : AppCompatActivity() {
 
         binding.btnChapter4.setOnClickListener {
             startActivity(Intent(this, MensReaScreenActivity::class.java).apply {
+            })
+        }
+
+        binding.btnChapter5.setOnClickListener {
+            startActivity(Intent(this, HomicideScreenActivity::class.java).apply {
             })
         }
 
